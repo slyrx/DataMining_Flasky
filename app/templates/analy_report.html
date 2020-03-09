@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Flasky - Detail{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>{{ model_name }} Report : </h1>
+</div>
+<div>
+    <div> {{ report }}</div>
+</div>
+    {% if imagename %}
+    <div><img  src="{{ url_for('static', filename=imagename[0]) }}" width="256" height="256"></div>
+    <div><img  src="{{ url_for('static', filename=imagename[1]) }}" width="256" height="256"></div>
+    {% endif %}
+{% endblock %}

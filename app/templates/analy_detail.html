@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Flasky - Detail{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Hello!</h1>
+</div>
+<div>
+    <div><a href="{{ url_for('.report', projectname=detail.project_name, reportname=detail.models[0]) }}">{{ detail.models[0] }}</a></div>
+    <div><a href="{{ url_for('.report', projectname=detail.project_name, reportname=detail.models[1]) }}">{{ detail.models[1] }}</a></div>
+    <div><a href="{{ url_for('.index') }}">{{ detail.models[2] }}</a></div>
+</div>
+{% endblock %}
